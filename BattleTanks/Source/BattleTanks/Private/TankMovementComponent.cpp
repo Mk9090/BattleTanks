@@ -20,8 +20,6 @@ void UTankMovementComponent::RequestDirectMove(const FVector& MoveVelocity, bool
 
 	auto RightThrow = FVector::CrossProduct(TankForward, AIForwardIntention).Z;
 	IntendTurnRight(RightThrow);
-
-	// UE_LOG(LogTemp, Warning, TEXT("%s pathfinding: %s"), *Name, *MoveVelocityString);
 }
 
 void UTankMovementComponent::IntendMoveForward(float Throw)
